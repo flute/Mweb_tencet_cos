@@ -75,7 +75,7 @@ const upload = (name, path, callback) => {
   cos.sliceUploadFile({
     Bucket: config.bucket,
     Region: config.region,
-    Key: `${preUrl}/${name}`,
+    Key: `${config.preUrl}/${name}`,
     FilePath: path
   }, function (err, data) {
     console.log(err, data);
